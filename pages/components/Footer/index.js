@@ -4,7 +4,11 @@ const Footer = () => {
     return(
         <div className='footerdev'>
             <div className='footer'>
-                <p><a href={'https://api.whatsapp.com/send?phone=45998230308&text=Meu%20Cupom'} target='_blank'><img alt='whatsapp' src='/whatsapp.png' className='whatsapp' /> Nosso Contato:  (45)99823-0308</a></p>
+                <p>
+                    <a href={'https://api.whatsapp.com/send?phone=45998230308&text=Meu%20Cupom'} target='_blank'>
+                        <img alt='whatsapp' src='/whatsapp.png' className='whatsapp' /> Nosso Contato:  (45)99823-0308
+                    </a>
+                </p>
             </div>
             <div className='desenvolvedor'>
                 <div className=''>

@@ -1,7 +1,18 @@
+:root{
+    --wrapper: #A60303;
+    --menu: 	#212625;
+    --menu-letter: white;
+    --footer: #212625;
+    --desenvolvedor: black;
+    --body: #F2CA99;
+    --footer-letter: white;
+
+}
+
 /*Cabeçalho*/
 
 .wrapper{
-    background-color: rgb(134 239 172);;
+    background-color: var(--wrapper);
     padding: 1rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
@@ -12,10 +23,14 @@
 }
 
 .menu{
-    background-color: rgb(34 197 94);
+    background-color: var(--menu);
     padding: 1rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     text-align: center;
+}
+
+.menu a{
+    color: var(--menu-letter);
 }
 
 .ancora{
@@ -30,10 +45,15 @@
     text-decoration: underline;
 }
 
+img.logo{
+    max-width: 300px;
+}
+
+
 
 /*Footer*/
 .footer{
-    background-color: rgb(21 128 61);
+    background-color: var(--footer);
     font-size: 20px;
     font-weight: bold;
     color: white;
@@ -42,13 +62,17 @@
 }
 
 .desenvolvedor{
-    background-color: rgb(20 83 45);
+    background-color: var(--desenvolvedor);
     color: white;
     padding: 10px
 }
 
 .whatsapp{
     width: 16px;
+}
+
+.footer a{
+    color: var(--footer-letter)
 }
 
 .teste{
@@ -59,24 +83,28 @@
     color: white
 }
 
+.numero{
+    color: blue;
+}
+
 /*Geral*/
 .titulo{
     text-align: center;
     padding-top: 1.5rem;
     font-weight: bold;
     margin-top: 1rem; /* 16px */
-    margin-bottom: 3rem; /* 16px */
+    margin-bottom: 2rem; /* 16px */
     font-size: 2.3rem;
 }
 
 p{
     font-size: 16pt;
     line-height: 40px;
-    margin: 0 3em 
+    margin: 1em; 
 }
 
 body{
-    background-color: rgb(247 254 231);
+    background-color: var (--body);
 }
 
 /*incio*/
@@ -196,4 +224,21 @@ body{
 }
 .italic{
     font-style: italic;
+}
+
+
+
+@media (max-width:480px) {
+    p{
+        font-size: 15pt;
+        line-height: 40px;
+        margin: 0 1em;
+    }
+    .titulo{
+        margin-bottom: 1.3rem;
+        margin-top: 0.5rem;
+    }
+    img.logo{
+        max-width: 250px;
+    }
 }
