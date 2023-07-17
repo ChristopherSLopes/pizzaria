@@ -15,7 +15,7 @@ const{data, error} = useSWR('/api/get-promo', fetcher)
             <PageTitle title='Seja Bem Vindo'/>
             <h1 className='titulo'>Pizzaria</h1>
             <p className='texto'>
-                Estamos sempre abertos a ouvir a sua opinião.
+                Estamos sempre abertos para ouvir a sua opinião.
             </p>
             <div className='botao'>
                 <Link href='/pesquisa'>
