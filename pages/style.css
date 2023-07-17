@@ -7,7 +7,7 @@
     --body: #F2CA99;
     --footer-letter: white;
     --color-button-send: red;
-    --color-button-go: yellow;
+    --color-button-go: rgb(205,141,0);
 }
 
 /*Cabeçalho*/
