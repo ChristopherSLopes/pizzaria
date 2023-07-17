@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import PageTitle from './components/PageTitle'
 
 const Pesquisa = () => {
+    const [botaoDesabilitado, setBotaoDesabilitado] = useState(false);
     const [ form, setForm ] = useState({ //Apenas colocaos o formulario em um useState
         Nome : '',
         Whatsapp : '',
@@ -11,6 +12,7 @@ const Pesquisa = () => {
     const [ sucess, setSuccess ] = useState(false)
     const [ retorno, setRetorno ] = useState({})
     const save = async () =>{
+        setBotaoDesabilitado(true);
         try{
             const response = await fetch('/api/save', { //O response é a resposta do fetch, o fetch sempre retorna uma resposta.
                 method: 'POST',
@@ -36,7 +38,7 @@ const Pesquisa = () => {
             <PageTitle title='Pesquisa'/>
             <h1 className='titulo'>Criticas e sugestões</h1>
             <p>
-                O restaurante x estara sempre em busca por atender melhor seus clientes.<br/>
+                Nossa pizzaria estara sempre em busca por atender melhor seus clientes.<br/>
                 Por isso, estamos sempre abertos a ouvir a sua opinião.
             </p>
             { !sucess && <div className='form'>
@@ -58,7 +60,7 @@ const Pesquisa = () => {
                     )
                 })}
                 </div>
-                <button className='button' onClick={save}>Salvar</button>
+                <button className='button' onClick={save} disabled={botaoDesabilitado}>Salvar</button>
 
             </div> /* se não tiver cupom ainda, mostra esse, se não, mostre o cupom*/}
             { sucess && <div className='div-cupom'> 
@@ -75,7 +77,7 @@ const Pesquisa = () => {
                     <div className='cupom-div'>
                         <span className='promocao-cupom'>{retorno.Promo}</span>
                         <br/>
-                        <span>Tire um print ou foto desta tela e apresente ao garçon</span>
+                        <span>Tire um print ou foto desta tela e apresente na proxima compra</span>
                     </div>
                 }
             </div>}

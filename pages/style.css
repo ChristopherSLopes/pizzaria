@@ -6,7 +6,8 @@
     --desenvolvedor: black;
     --body: #F2CA99;
     --footer-letter: white;
-
+    --color-button-send: red;
+    --color-button-go: yellow;
 }
 
 /*Cabeçalho*/
@@ -113,13 +114,14 @@ body{
     margin-bottom: 3rem; /* 48px */
 }
 .botaoDentro{
-    background-color: rgb(37 150 200);
+    background-color: var(--color-button-go);
     padding-left: 1.5rem;
     padding-right: 1.5rem; 
     padding-top: 1rem; /* 16px */
     padding-bottom: 1rem; /* 16px */
     font-weight: bold;
     border-radius: 0.5rem;
+    border: 1px solid black;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     font-size: 16pt;
     color: black;
@@ -165,7 +167,7 @@ body{
 }
 
 .button{
-    background-color: rgb(96 165 250);
+    background-color: var(--color-button-send);
     padding-top: 1rem; /* 16px */
     padding-bottom: 1rem; /* 16px */
     padding-left: 2.5rem; /* 40px */
